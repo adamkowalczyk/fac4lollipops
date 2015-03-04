@@ -14,13 +14,18 @@ function reset() {
 $(document).ready(function(){
 
 	$('#pick').click(function(){
-		var choiceIndex = pick();
-		var choiceName = names[choiceIndex];
-		$('#picked').append('<p>'+ choiceName +'</p>');
-		if (removeNameToggle) {
-			names.splice(choiceIndex,1);
+		if (names.length) {	
+			var choiceIndex = pick();
+			var choiceName = names[choiceIndex];
+			$('#picked').append('<p>'+ choiceName +'</p>');
+			if (removeNameToggle) {
+				names.splice(choiceIndex,1);
+			}
+			$('#remaining-num').text(names.length);
 		}
-		$('#remaining-num').text(names.length);
+		else {
+			alert('No more names! Reset to start again');
+		}
 	});
 
 	$('#toggle-reduce').click(function(){
