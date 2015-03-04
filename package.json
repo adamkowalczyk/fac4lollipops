@@ -1,0 +1,14 @@
+{
+  "name": "lollipops",
+  "version": "1.0.0",
+  "description": "fac4 name picker",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Kowalczyk",
+  "license": "ISC",
+  "dependencies": {
+    "ecstatic": "^0.6.1"
+  }
+}
